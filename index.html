@@ -9,9 +9,9 @@
 </head>
 
 <body>
-	<div data-role="page">
+	<div data-role="page" id="menu">
 
-        <div data-role="header">
+        <div data-role="header" style="background-color: darksalmon">
             <h1>Menu</h1>
         </div><!-- /header -->
     
@@ -19,14 +19,18 @@
             <div class="ui-grid-b">
                 <div class="ui-block-a" style="height:100%;text-align:center">
                     <div style="border:1px #0f0 solid;">
-                        <img src="images/hamburger.png" style="border:1px #f00 solid; width:80px; margin:5px 15px 5px 18px">
+                        <a href="#hamburger" data-transition="pop">
+                            <img src="images/hamburger.png" style="border:1px #f00 solid; width:80px; margin:5px 15px 5px 18px">
                             <p>hamburger</p>
+                        </a>
                     </div>
                 </div>
                 <div class="ui-block-b" style="height:100%;text-align:center">
                     <div>
-                        <img src="images/cake.png" style="border:1px #f00 solid; width:80px; margin:5px 15px 5px 18px">
+                        <a href="#cupcake"data-transition="flip">
+                            <img src="images/cake.png" style="border:1px #f00 solid; width:80px; margin:5px 15px 5px 18px">
                             <p>cupcake</p>
+                        </a>
                     </div>
                 </div>
                 <div class="ui-block-c" style="height:100%;text-align:center">
@@ -39,9 +43,11 @@
 
             <div class="ui-grid-b">
                     <div class="ui-block-a" style="height:100%;text-align:center">
-                        <div style="border:1px #0f0 solid;">
-                            <img src="images/coffee.png" style="border:1px #f00 solid; width:80px; margin:5px 15px 5px 18px">
+                        <div>
+                            <a href="coffee.html">
+                                <img src="images/coffee.png" style="border:1px #f00 solid; width:80px; margin:5px 15px 5px 18px">
                                 <p>coffee</p>
+                            </a>
                         </div>
                     </div>
                     <div class="ui-block-b" style="height:100%;text-align:center">
@@ -59,10 +65,64 @@
                 </div>
         </div><!-- /content -->
     
-        <div data-role="footer">
+        <div data-role="footer" data-position="fixed">
             <h4>&copy; 2020 All rights reversed.</h4>
         </div><!-- /footer -->
     </div><!-- /page -->
+
+        <div data-role="page" id="hamburger">
+
+            <div data-role="header" data-position="fixed">
+                <h1>hamburger</h1>
+                <a href="#menu" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-power">Back</a>
+            </div><!-- /header -->
+    
+            <div role="main" class="ui-content" style="text-align: center">
+                <img src="images/hamburger.png" width="30%">
+                <img src="images/hamburger.png" width="30%">
+                <img src="images/hamburger.png" width="30%">
+                <img src="images/hamburger.png" width="30%">
+                <img src="images/hamburger.png" width="30%">
+                <img src="images/hamburger.png" width="30%">
+                <p><a href="#menu" data-transition="pop">Back to menu</a></p>
+            </div><!-- /content -->
+            
+            <div data-role="footer" data-position="fixed">
+                <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
+        <div data-role="page" id="cupcake">
+
+            <div data-role="header">
+                <h1>hamburger</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content" style="text-align: center">
+                <img src="images/cake.png" width="30%">
+                <p><a href="#menu" data-transition="flip">Back to menu</a></p>
+            </div><!-- /content -->
+
+            <div data-role="footer">
+                <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
+        <div data-role="page" id="coffee">
+
+                <div data-role="header">
+                    <h1>coffee</h1>
+                </div><!-- /header -->
+    
+                <div role="main" class="ui-content" style="text-align: center">
+                    <img src="images/coffee.png" width="30%">
+                    <p><a href="#menu" data-transition="flip">Back to menu</a></p>
+                </div><!-- /content -->
+    
+                <div data-role="footer">
+                    <h4>Page Footer</h4>
+                </div><!-- /footer -->
+            </div><!-- /page -->
 
 </body>
 </html>
